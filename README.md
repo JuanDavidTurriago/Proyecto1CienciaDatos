@@ -18,7 +18,7 @@ pip install -r requirements.txt
 if (-not (Test-Path .env)) { Copy-Item .env.example .env }
 ```
 
-3. Editar `.env`: completar `DATABASE_URL`. Si se usa Docker, cambiar `POSTGRES_PASSWORD` y usar esa misma clave en la URL. Codificar caracteres especiales de la contraseña en la URL. Nunca subir `.env`.
+3. Editar `.env`: completar `DATABASE_URL`. Si se usa Docker, cambiar `POSTGRES_PASSWORD` y usar esa misma clave en la URL. Codificar caracteres especiales de la contraseña en la URL. 
 4. Con Docker: `docker compose -p grupo1p1 up -d --wait`. Con PostgreSQL existente: crear antes la base y dar al usuario permisos para crear el esquema `p1_homicidios`. Las cinco tablas de ese esquema se recargan completamente.
 5. Abrir `jupyter lab`. Ejecutar **Restart Kernel & Run All Cells** en este orden:
    - `entrega/fase_b_etl.ipynb`
