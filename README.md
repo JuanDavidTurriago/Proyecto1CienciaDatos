@@ -31,8 +31,4 @@ Los notebooks ya incluyen salidas de una ejecución verificada. C y D abren su p
 
 Los seis entregables principales están en `entrega/`. `datos/` conserva el Excel aportado, su conversión CSV sin filtrar y las huellas SHA-256. `src/` contiene el ETL, las seis consultas y las ocho figuras. `documentacion/` contiene el análisis de avances, la validación y el guion oral. Los notebooks de exploración inicial y EDA son complementos pedidos por los avances.
 
-**Antes de entregar:** confirmar el enlace oficial, pertenencia al catálogo y aceptación de la conversión Excel a CSV. Hay 31.708 filas, suma de CANTIDAD 31.746, 4.383 repeticiones exactas y solo días 1 a 12 en todas las fechas. No se certifica cobertura nacional ni se eliminan repeticiones sin un identificador de evento. El PDF indica 23/24-sep-2026 y los avances 30-sep; confirmar con el docente la fecha aplicable.
-
-**Verificación opcional:** `python scripts/verificar_proyecto.py` ejecuta pruebas de integridad y los cinco notebooks en kernels nuevos. Afecta solo la bodega del proyecto. Si cambia la fuente, volver a generar los PDF con `python scripts/construir_documentos.py` después de ejecutar B, C y D.
-
 **Acuerdo del avance 1 (firma pendiente):** Los integrantes del grupo se comprometen a mantener el dataset elegido durante los tres proyectos del semestre (P1, P2/3, P4). Cambios sólo por autorización del profesor. Iniciales de conformidad por completar: ___ / ___ / ___. Registro en Moodle y repositorio compartido con el docente: pendientes de confirmación.
