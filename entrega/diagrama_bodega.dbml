@@ -1,0 +1,40 @@
+// Modelo editable en dbdiagram.io. Cada fila del hecho conserva una fila de origen.
+Table dim_tiempo {
+  tiempo_id integer [pk]
+  fecha date [unique, not null]
+  anio integer [not null]
+  mes integer [not null]
+  dia integer [not null]
+  trimestre integer [not null]
+}
+Table dim_ubicacion {
+  ubicacion_id integer [pk]
+  cod_departamento varchar(2) [not null]
+  departamento text [not null]
+  cod_municipio varchar(5) [not null]
+  municipio text [not null]
+  zona text [not null]
+  indexes { (cod_municipio, zona) [unique] }
+}
+Table dim_sexo {
+  sexo_id integer [pk]
+  sexo text [unique, not null]
+}
+Table dim_contexto {
+  contexto_id integer [pk]
+  arma_medio text [not null]
+  modalidad_presunta text [not null]
+  caracterizacion text [not null]
+  indexes { (arma_medio, modalidad_presunta, caracterizacion) [unique] }
+}
+Table hecho_homicidios {
+  hecho_id bigint [pk]
+  fuente_sha256 varchar(64) [not null]
+  fila_fuente integer [not null]
+  tiempo_id integer [not null, ref: > dim_tiempo.tiempo_id]
+  ubicacion_id integer [not null, ref: > dim_ubicacion.ubicacion_id]
+  sexo_id integer [not null, ref: > dim_sexo.sexo_id]
+  contexto_id integer [not null, ref: > dim_contexto.contexto_id]
+  cantidad integer [not null, note: 'CHECK cantidad > 0; medida aditiva']
+  indexes { (fuente_sha256, fila_fuente) [unique] }
+}

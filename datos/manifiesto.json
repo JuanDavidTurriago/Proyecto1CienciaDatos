@@ -1,0 +1,23 @@
+{
+  "archivo_recibido": "DataSetHomicidios2020-2025.xlsx",
+  "hoja": "Hoja1",
+  "filas": 31708,
+  "columnas": [
+    "FECHA HECHO",
+    "COD_DEPTO",
+    "DEPARTAMENTO",
+    "COD_MUNI",
+    "MUNICIPIO",
+    "ZONA",
+    "SEXO",
+    "ARMA MEDIO",
+    " MODALIDAD PRESUNTA",
+    "SPOA_CARACTERIZACION",
+    "CANTIDAD"
+  ],
+  "xlsx_sha256": "702fbd57c68360f9e0cb6c1edf45d4ab937d5fa007d03885e907acf591f7d003",
+  "csv_sha256": "5a068e689711c1750e76788e41f94304061992b7233a5b49bd7b54bc3e0e5641",
+  "procedencia": "Archivo aportado por el grupo; URL, editor y pertenencia al catálogo pendientes de confirmar.",
+  "operacion": "Conversión XLSX a CSV UTF-8, fechas ISO; no se filtran, deduplican ni normalizan valores.",
+  "advertencia": "El CSV es una conversión del Excel recibido, no una descarga cruda certificada de la fuente original."
+}
